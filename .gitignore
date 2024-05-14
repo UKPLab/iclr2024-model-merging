@@ -1,0 +1,4 @@
+alias/
+output/
+work/
+*__pycache__*
