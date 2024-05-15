@@ -2,9 +2,6 @@
 
 This repository contains code and resources related to the paper "Model Merging by Uncertainty-Based Gradient Matching", published as a poster at ICLR 2024.
 
-This project contains the implementations of methods from our paper [Elastic Weight Removal for Faithful and Abstractive Dialogue Generation](https://arxiv.org/pdf/2303.17574.pdf), presented at NAACL 2024.
-The implementations include methods for document-grounded dialogue generation, datasets, and various metrics for evaluation, including faithfulness metrics.
-
 A description of how to use this implementation is found below.
 
 If you use this repository and our work, please cite
