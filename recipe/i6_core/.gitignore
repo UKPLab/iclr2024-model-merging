@@ -1,0 +1,6 @@
+.*.swp
+*.pyc                    
+__pycache__
+.idea
+*.history*
+.pytest_cache

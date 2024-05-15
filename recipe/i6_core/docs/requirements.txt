@@ -1,0 +1,6 @@
+flask
+h5py
+matplotlib
+numpy
+git+git://github.com/rwth-i6/sisyphus.git
+soundfile

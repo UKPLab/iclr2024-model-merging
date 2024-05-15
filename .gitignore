@@ -2,3 +2,4 @@ alias/
 output/
 work/
 *__pycache__*
+*wandb*

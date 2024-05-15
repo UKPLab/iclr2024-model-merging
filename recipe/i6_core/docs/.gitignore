@@ -1,0 +1,7 @@
+/_build
+/_static
+/_templates
+
+# auto generated at the moment
+/api/*.rst
+/i6_core

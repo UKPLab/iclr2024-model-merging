@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<corpus name="job-testing">
+  <speaker-description name="116">
+    <gender>male</gender>
+  </speaker-description>
+  <recording name="116-288045-0000" audio="sample.wav">
+    <speaker name="116"/>
+    <segment name="116-288045-0000" start="0.0000" end="10.6500">
+      <orth> AS I APPROACHED [non-speech] THE CITY, I HEARD BELLS RINGING [noise] [noise] AND A LITTLE LATER THIS DOES NOT BELONG HERE I FOUND THE THIS DOES NOT BELONG HERE! BUT I WANT IT HERE! STREETS ASTIR WITH THRONGS OF WELL DRESSED PEOPLE IN FAMILY GROUPS WENDING THEIR WAY HITHER AND THITHER!!!</orth>
+    </segment>
+  </recording>
+</corpus>

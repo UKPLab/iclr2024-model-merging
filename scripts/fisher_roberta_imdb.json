@@ -1,0 +1,11 @@
+{
+    "model_name_or_path": "/path/to/roberta-base-imdb/",
+    "method": "sequence_classification_squared_gradients",
+    "per_device_eval_batch_size": 1,
+    "track_fim": true,
+    "max_input_length": 384,
+    "output_dir": "roberta-base-imdb-fisher",
+    "dataset_name": "/path/to/iclr2024-model-merging/code/merging/datasets/imdb.py",
+    "dataset_config_name": "classification",
+    "dataset_test_split": "train"
+}

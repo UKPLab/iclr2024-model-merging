@@ -1,0 +1,36 @@
+name: job_tests
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  test-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: "rwth-i6/i6_core"
+          path: "i6_core"
+      - uses: actions/checkout@v2
+        with:
+          repository: "rwth-i6/sisyphus"
+          path: "sisyphus"
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+          cache: 'pip'
+      - name: Setup Sisyphus environment
+        run: |
+          pip install --user --upgrade pip setuptools wheel
+          cd sisyphus
+          pip install .
+          cd ..
+          pip install pytest
+          pip install -r i6_core/requirements.txt
+      - name: Test Jobs
+        run: |
+          set -e
+          pytest i6_core/tests/job_tests

@@ -1,0 +1,13 @@
+{
+    "model_name_or_path": "/path/to/model",
+    "per_device_eval_batch_size": 32,
+    "cache_dir": TODO(),
+    "max_input_length": 384,
+    "max_output_length": 128,
+    "method": "sequence_classification",
+    "metric_output_file": "roberta_base_imdb.metrics.json",
+    "prediction_output_file": "roberta_base_imdb.search_output.json",
+    "dataset_name": "/path/to/iclr2024-model-merging/code/merging/datasets/imdb.py",
+    "dataset_config_name": "classification",
+    "dataset_test_split": "test"
+}

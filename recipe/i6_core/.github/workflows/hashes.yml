@@ -1,0 +1,45 @@
+name: hashes
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  test-hashes:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        path: "recipe/i6_core"
+    - uses: actions/checkout@v2
+      with:
+        repository: "rwth-i6/i6_experiments"
+        path: "recipe/i6_experiments"
+    - uses: actions/checkout@v2
+      with:
+        repository: "rwth-i6/sisyphus"
+        path: "sisyphus"
+    - uses: actions/setup-python@v4
+      with:
+        python-version: 3.7
+        cache: "pip"
+    - run: |
+        pip install --user --upgrade pip setuptools wheel
+        pip install flask
+        pip install -r recipe/i6_core/requirements.txt
+    - name: Setup Sisyphus environment
+      run: |
+        cd sisyphus
+        python3 setup.py install
+        cd ..
+        ln -s recipe/i6_experiments/tests/hash_tests config
+        ln -s recipe/i6_experiments/tests/check_jobs.py check_jobs.py
+        ln -s recipe/i6_experiments/tests/settings.py settings.py
+    - name: Test hashes
+      run: |
+        shopt -s globstar
+        set -e
+        for pyfile in config/**/*.py; do python check_jobs.py $pyfile; done
+
