@@ -93,6 +93,6 @@ The code is mainly based on the concept of ''methods'' that are found in the `/c
   2. Loading all datasets
   3. Defining and applying the preprocessing methods, defined in `/code/merging/methods/preprocessing`
 
-To understand how the method classes are structured it's best to check `code/dialog/methods/base.py` which defines a base class from which all methods inherit.
+To understand how the method classes are structured it's best to check `code/merging/methods/base.py` which defines a base class from which all methods inherit.
 
 The main entry point for the code is `/code/merging/main.py` that handles loading method classes, models, and running the Trainers.
